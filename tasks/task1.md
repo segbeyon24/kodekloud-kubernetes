@@ -2,10 +2,12 @@
 Create a pod for the dev-team to test a feature
 
 
-Solution
+## Solution
 
-- Create pod-httpd.yml file
-  ```vi pod-httpd.yml```
+Create pod-httpd.yml file
+
+  ```vi pod-httpd.yml
+  ```
   ```
   apiVersion: v1
   kind: Pod
@@ -19,7 +21,7 @@ Solution
       - containerPort: 80
   ```
 
-  - Run the pod
+- Run the pod
     ```kubectl apply -f pod-httpd.yml```
 
 
