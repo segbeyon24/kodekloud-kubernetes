@@ -6,8 +6,8 @@ Create a pod for the dev-team to test a feature
 
 Create pod-httpd.yml file
 
-  ```vi pod-httpd.yml
-  ```
+  ```vi pod-httpd.yml```
+  
   ```
   apiVersion: v1
   kind: Pod
