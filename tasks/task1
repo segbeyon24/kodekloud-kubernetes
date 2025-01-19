@@ -1,0 +1,12 @@
+***Task
+Create a pod for the dev-team to test a feature
+
+
+Solution
+
+- create pod-httpd.yml file
+  ```vi pod-httpd.yml```
+
+
+- check the pod:
+  ```kubectl get pod pod-httpd.yml```
