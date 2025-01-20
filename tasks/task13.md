@@ -46,6 +46,17 @@ spec:
 - Check
   ```kubectl get all```
 
+## Issues
+
+- Error
+
+    `kubectl apply -f nginx-replicationcontroller.yml`
+    The ReplicationController "nginx-replicationcontroller" is invalid: spec.template.metadata.labels: Invalid value: map[string]string{"app":"nginx_app"}: `selector` does not match template `labels`
+
+ - Solution:
+   - Ensure the selector and spec.template.metadata.labels are the same
+   - Add the type metadata.labels.type: frontend
+
 
 
 
@@ -86,7 +97,7 @@ Scaling the deployment <mydeploy.yml>:
      `spec:
         replicas: 5
         `
-  ```kubectl apply -f <mydeploy.yml>
+  ```kubectl apply -f <mydeploy.yml>```
 
  2. Automatic Scaling with Horizontal Pod Autoscaler (HPA)
     - Ensure the Kubernetes Metrics Server is installed and running in your cluster. 
@@ -94,6 +105,7 @@ Scaling the deployment <mydeploy.yml>:
       https://github.com/kubernetes-sigs/metrics-server
 
     - this a sample:
+
 ```bash
 apiVersion: apps/v1
 kind: Deployment
@@ -148,9 +160,9 @@ spec:
 
  - Testing the Autoscaling:
    - Simulate High Load: Connect to a pod and generate CPU load (e.g.using `stress` or a busy loop in a script)
-    ```bash
-      kubectl exec -it <pod-name> -- /bin/sh
-	  while true; do :; done```
+    ```kubectl exec -it <pod-name> -- /bin/sh```
+
+	  ```while true; do :; done```
 
    - Monitor HPA Behavior: Watch the HPA and pod scaling in action:
      ```kubectl get hpa nginx-deployment-hpa -w```
@@ -164,13 +176,4 @@ spec:
 
 
 
-## issues
 
-- Error
-
-    `kubectl apply -f nginx-replicationcontroller.yml`
-    The ReplicationController "nginx-replicationcontroller" is invalid: spec.template.metadata.labels: Invalid value: map[string]string{"app":"nginx_app"}: `selector` does not match template `labels`
-
- - Solution:
-   - Ensure the selector and spec.template.metadata.labels are the same
-   - Add the type metadata.labels.type: frontend
