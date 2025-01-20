@@ -174,12 +174,12 @@ while true; do :; done
 kubectl get hpa nginx-deployment-hpa -w
 ```
      
-     Check the number of pods:
+   - Check the number of pods:
 ```bash
 kubectl get pods -l app=nginx
 ```
 
-     Reduce Load: Stop the load generation and observe the HPA reducing the number of replicas
+   - Reduce Load: Stop the load generation and observe the HPA reducing the number of replicas
 
 
 
