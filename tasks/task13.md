@@ -41,10 +41,14 @@ spec:
         - containerPort: 80
 ```
 - Run 
-  ```kubectl apply -f <nginx-replicationcontroller>```
+```bash
+kubectl apply -f <nginx-replicationcontroller>
+```
 
 - Check
-  ```kubectl get all```
+```bash
+kubectl get all
+```
 
 ## Issues
 
@@ -160,15 +164,20 @@ spec:
 
  - Testing the Autoscaling:
    - Simulate High Load: Connect to a pod and generate CPU load (e.g.using `stress` or a busy loop in a script)
-    ```kubectl exec -it <pod-name> -- /bin/sh```
-
-	  ```while true; do :; done```
+```bash
+kubectl exec -it <pod-name> -- /bin/sh
+while true; do :; done
+```
 
    - Monitor HPA Behavior: Watch the HPA and pod scaling in action:
-     ```kubectl get hpa nginx-deployment-hpa -w```
+```bash
+kubectl get hpa nginx-deployment-hpa -w
+```
      
      Check the number of pods:
-     ```kubectl get pods -l app=nginx```
+```bash
+kubectl get pods -l app=nginx
+```
 
      Reduce Load: Stop the load generation and observe the HPA reducing the number of replicas
 
