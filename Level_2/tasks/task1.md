@@ -12,7 +12,9 @@ Solution
 
 1. Create the pod
 
-```vi volume-share-devops```
+```bash
+vi volume-share-devops
+```
 
 ```bash
 apiVersion: v1

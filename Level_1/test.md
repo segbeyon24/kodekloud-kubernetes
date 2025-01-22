@@ -27,7 +27,7 @@ This task aims to establish a new pod adhering to defined image specifications a
 
 Note: The kubectl utility on jump_host has been configured to work with the kubernetes cluster.
 
-Solution
+- Solution
 
 ```bash
 apiVersion: v1
@@ -40,9 +40,9 @@ spec:
   containers:
   - name: nginx-container-t1q1
     image: nginx:latest
-    ```
-- apply and get
 ```
+  - apply and get
+
 
 
 
@@ -60,7 +60,8 @@ Deployment 'nginx-t2q1' exists
 Deployment 'nginx-t2q1' is using 'nginx' image
 
 
-Solution
+
+- Solution
 
 ```bash
 apiVersion: apps/v1
@@ -82,7 +83,7 @@ spec:
         image: nginx:latest
 ```
 
-- apply and get
+  - apply and get
 
 
 
@@ -117,7 +118,8 @@ Use image fedora with latest tag only and remember to mention tag i.e fedora:lat
 Use command sleep 5.
 
 
-Solution
+
+- Solution
 
 ```bash
 apiVersion: batch/v1
@@ -136,7 +138,7 @@ spec:
         command: ["sleep", "5"]
 ```
 
-- apply and get
+  - apply and get
 
 
 
@@ -168,7 +170,7 @@ Container name is 'cron-nautilus-t3q1'
 Restart policy is set as 'OnFailure'
 
 
-Solution
+- Solution
 
 ```bash
 apiVersion: batch/v1
@@ -188,7 +190,7 @@ spec:
             command: ["sh", "-c", "echo Welcome to xfusioncorp!"]
 ```
 
-- apply and get
+  - apply and get
 
 
 
@@ -212,9 +214,9 @@ Redis is responding fine
 
 
 
-Solution
+- Solution
 
-- fix typo errors in image name and configmap
+  - fix typo errors in image name and configmap
 
 
 
@@ -240,7 +242,7 @@ Pods are running
 Website is up and accessible
 
 
-Solution
+- Solution
 
 
 
