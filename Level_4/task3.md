@@ -170,8 +170,8 @@ Nginx is optimized for handling static files and reverse proxying, making it the
 
 
 
-3. Were the adjustments to the nginx,conf necessary? 
-Yes, the adjustments to nginx.conf were necessary because:
+3. Were the adjustments to the `nginx.conf` necessary? 
+Yes, the adjustments to `nginx.conf` were necessary because:
 
 - Changing listen 80 to listen 8093
   - Required to match the exposed service port (NodePort 30012 → ContainerPort 8093).
