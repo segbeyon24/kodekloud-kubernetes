@@ -149,6 +149,7 @@ when a request for index.php comes in, Nginx forwards it to the php-fpm-containe
 and returns the response to Nginx for serving.
 
 
+
 2. Why is nginx-container needed here? Why didn't I just use the php-fpm-container?
 
 The nginx-container is needed because PHP-FPM (php-fpm-container) does not serve HTTP requests directly—it only processes PHP scripts.
@@ -165,6 +166,7 @@ Here’s why both are used:
 
 If you used only php-fpm-container, you’d need another service (like php -S or Apache) to serve HTTP requests. 
 Nginx is optimized for handling static files and reverse proxying, making it the best choice in this setup. 
+
 
 
 
