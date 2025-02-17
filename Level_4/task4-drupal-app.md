@@ -21,7 +21,7 @@ Drupal installation page by clicking on App button.
 
 
 
-# Solution
+## Solution
 
 1. 
 
