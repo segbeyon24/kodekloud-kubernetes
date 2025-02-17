@@ -1,9 +1,9 @@
 1. CrashLoopbackoff
 
 - Errors
-  - exit code 127: the application attempt to access a non-existent file
-  - error OOM: Pod is out-of-memory
-  - exit code 137: error is outside of the container
+  - Exit code 127: The application attempt to access a non-existent file
+  - Error OOM: Pod is out-of-memory
+  - Exit code 137: Error is outside of the container
 
 
 2. Pending Pods
