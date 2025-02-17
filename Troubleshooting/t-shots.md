@@ -47,3 +47,6 @@
           containers:
           ...`
      - Recommendation: use dns plugins for resolving and accessing services
+    
+8. Identifying leaks in RBAC
+   - 
