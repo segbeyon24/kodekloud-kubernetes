@@ -6,10 +6,10 @@
    - RBAC denies permisssions by default, except when an access is allowed.
 
    - `kubectl auth can-i list pods -n monitoring`
-   - `kubectl auth can-i get pods --as*jane --v*10` 
-   - `kubectl auth can-i delete pods -n xxx --as*jane --v*5`
+   - `kubectl auth can-i get pods --as*jane --v=10` 
+   - `kubectl auth can-i delete pods -n xxx --as*jane --v=5`
 
-   -`kubectl auth can-i delete pods --as*system:serviceaccount:default:default --v*5`
+   -`kubectl auth can-i delete pods --as*system:serviceaccount:default:default --v=5`
 
    - `kubectl auth whoami`
    - `kubectl get roles`
