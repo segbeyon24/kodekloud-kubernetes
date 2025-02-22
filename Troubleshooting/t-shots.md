@@ -30,7 +30,8 @@
 - Using a serviceaccount that is not in your namespace in your deployment/pod
 
 
-## Schrodinger deployment: Watchout for selector-labels match/mismatch between different services
+## Schrodinger deployment
+- Watchout for selector-labels match/mismatch between different services
 
 
 ## Create container error
@@ -53,5 +54,9 @@
           ...`
      - Recommendation: use dns plugins for resolving and accessing services
     
-## Identifying leaks in RBAC
-   - 
+- Identifying leaks in RBAC
+
+- Some Notes
+  - ClusterRoleBindings cannot reference Roles.
+  - Creating the RoleBinding in a namespace other than the subjects’ allows the subject to have roles in other namespaces.
+  - RoleBindings connect ClusterRoles, but they only give access to the namespace defined in the binding.
