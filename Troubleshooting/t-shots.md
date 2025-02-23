@@ -34,7 +34,9 @@
 - Watchout for selector-labels match/mismatch between different services
 
 
-## Create container error
+## Createcontainer error
+- k
+- k
 
 
 ## When configmaps and secrets are altered, the corresponding pods are supposed to restart to reflect the change(s). Install a package like reloaderto automate this process
