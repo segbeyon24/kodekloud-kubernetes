@@ -16,7 +16,7 @@
         operator: Equal
         value: machine-learning
 
-- Unscheduled pod, due to high resource request: adjust the request (not the limit) to the available resources in the cluster or increase the resources in the cluster (such as nodes)
+  - Unscheduled pod, due to high resource request: adjust the request (not the limit) to the available resources in the cluster or increase the resources in the cluster (such as nodes)
 
 
 ## Missing Pods
@@ -60,3 +60,7 @@
   - ClusterRoleBindings cannot reference Roles.
   - Creating the RoleBinding in a namespace other than the subjects’ allows the subject to have roles in other namespaces.
   - RoleBindings connect ClusterRoles, but they only give access to the namespace defined in the binding.
+
+
+## Leaky Network policies
+- 
