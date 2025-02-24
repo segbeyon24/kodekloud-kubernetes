@@ -65,4 +65,16 @@
 
 
 ## Leaky Network policies
-- 
+- In network policy, by default, (ingress) traffic is allowed from anywhere in the cluster - pods would connect with another pod even if they are not supposed to. To overwrite this, you can create a no-connection policy when policies are not specifically defined:
+- create a deny-default.yml
+```yaml
+---
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: default-deny-ingress
+spec:
+  podSelector: {}
+  policyTypes:
+  - Ingress
+```
